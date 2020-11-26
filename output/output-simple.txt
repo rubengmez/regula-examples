@@ -1,0 +1,74 @@
+{
+  "result": [
+    {
+      "expressions": [
+        {
+          "value": {
+            "controls": {
+              "CISAZURE_6.3": {
+                "rules": [
+                  "simple"
+                ],
+                "valid": false
+              },
+              "NIST-800-53_SC-7 (5)": {
+                "rules": [
+                  "simple"
+                ],
+                "valid": false
+              }
+            },
+            "message": "0 rules passed, 1 rules failed\n0 controls passed, 2 controls failed\nRule simple failed for resource azurerm_resource_group.OPA-ResourceGroup2\n",
+            "rules": {
+              "simple": {
+                "metadata": {
+                  "custom": {
+                    "controls": {
+                      "CISAZURE": [
+                        "CISAZURE_6.3"
+                      ],
+                      "NIST": [
+                        "NIST-800-53_SC-7 (5)"
+                      ]
+                    },
+                    "severity": "High"
+                  },
+                  "description": "Todos los grupos de recursos tienen que pertenecer a la misma localización, en este caso WEST EUROPE",
+                  "id": "FG_R00192",
+                  "title": "Esto es una prueba de una regla simple"
+                },
+                "resources": {
+                  "azurerm_resource_group.OPA-ResourceGroup": {
+                    "id": "azurerm_resource_group.OPA-ResourceGroup",
+                    "message": "",
+                    "type": "azurerm_resource_group",
+                    "valid": true
+                  },
+                  "azurerm_resource_group.OPA-ResourceGroup2": {
+                    "id": "azurerm_resource_group.OPA-ResourceGroup2",
+                    "message": "",
+                    "type": "azurerm_resource_group",
+                    "valid": false
+                  }
+                },
+                "valid": false
+              }
+            },
+            "summary": {
+              "controls_failed": 2,
+              "controls_passed": 0,
+              "rules_failed": 1,
+              "rules_passed": 0,
+              "valid": false
+            }
+          },
+          "text": "data.fugue.regula.report",
+          "location": {
+            "row": 1,
+            "col": 1
+          }
+        }
+      ]
+    }
+  ]
+}
